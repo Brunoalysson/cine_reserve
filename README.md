@@ -34,10 +34,12 @@ The backend is built with **Django 5.2**, **Django REST Framework**, and uses **
 ### 1. Clone the repository
 #bash
 git clone https://github.com/Brunoalysson/cine_reserve.git
+
 cd cine_reserve
 
 ### 2. Create and activate virtual environment with Poetry
 python -m poetry install
+
 python -m poetry shell
 
 ### 3. Run Django migrations
@@ -48,6 +50,7 @@ python -m poetry run python manage.py createsuperuser
 
 ### 5. Start the development server
 python -m poetry run python manage.py runserver
+
 The API will be available at: http://127.0.0.1:8000/
 
 Main API Endpoints:
