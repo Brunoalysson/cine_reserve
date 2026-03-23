@@ -54,31 +54,49 @@ python -m poetry run python manage.py runserver
 The API will be available at: http://127.0.0.1:8000/
 
 Main API Endpoints:
+
 #Auth
+
+
 POST /api/token/ – Obtain JWT token
+
 POST /api/token/refresh/ – Refresh JWT token
+
 POST /api/register/ – Register a new user
 
+
 #Movies
+
 GET /api/movies/ – List movies
+
 POST /api/movies/ – Create a movie (admin only)
 
+
 #Sessions
+
 GET /api/sessions/ – List sessions
+
 POST /api/sessions/ – Create a session (admin only)
 
+
 #Seats
+
 GET /api/seats/?session=<id> – List seats for a session
+
 POST /api/seats/{id}/reserve/ – Reserve a seat
 
 All protected endpoints require the header:
+
 Authorization: Bearer <access_token>
 
 **Postman**
 
 You can import the provided Postman collection to easily test all endpoints.
+
 Suggested environment variables:
 
 base_url = http://127.0.0.1:8000
+
 token = <access_token>
+
 refresh_token = <refresh_token>
